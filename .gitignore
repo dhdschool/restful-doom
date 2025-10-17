@@ -22,6 +22,7 @@ tags
 build
 packages
 chocpkg/*
+src/py/.env
 
 # These are the default patterns globally ignored by Subversion:
 *.o
