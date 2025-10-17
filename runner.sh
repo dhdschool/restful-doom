@@ -17,6 +17,6 @@ listenerArg=( "$SCRIPT_DIR/src/py/listener.py")
 doomCmd="$DOOM_EXE_PATH"
 doomArg=("-apiport" "6666" "-iwad" "$IWAD_PATH" "-server" "-screensize" "11")
 
-$listenerCmd "${listenerArg[@]}" &
-
 $doomCmd "${doomArg[@]}" &
+$listenerCmd "${listenerArg[@]}"
+
