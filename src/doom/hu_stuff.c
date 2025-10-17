@@ -693,6 +693,7 @@ boolean HU_Responder(event_t *ev)
                 if (w_chat.l.len)
                 {
                     M_StringCopy(lastmessage, w_chat.l.l, sizeof(lastmessage));
+                    send_chat_to_host(lastmessage); // Send the lastmessage to our python script
                     plr->message = lastmessage;
                 }
 	    }
