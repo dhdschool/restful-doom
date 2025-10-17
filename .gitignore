@@ -23,6 +23,7 @@ build
 packages
 chocpkg/*
 src/py/.env
+myrunner.sh
 
 # These are the default patterns globally ignored by Subversion:
 *.o

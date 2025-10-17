@@ -3,9 +3,12 @@ import dotenv
 from enum import Enum
 from tool_calls import *
 import json
+from pathlib import Path
+
+env_path = Path(__file__).absolute().parent / '.env'
 
 
-OPENAI_API_KEY = dotenv.get_key(".env", "OPENAI_API_KEY")
+OPENAI_API_KEY = dotenv.get_key(env_path, "OPENAI_API_KEY")
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 SYSTEM_PROMPT = """
