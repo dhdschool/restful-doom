@@ -10,7 +10,13 @@ SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 DOOM_EXE_PATH="Your built DOOM executable here"
 IWAD_PATH="Your DOOM WAD here"
 
-python $(SCRIPT_DIR)/src/py/listener.py
 
-$(DOOM_EXE_PATH) -apiport 6666 -iwad $(IWAD_PATH) -server
+listenerCmd="python"
+listenerArg=( "$SCRIPT_DIR/src/py/listener.py")
 
+doomCmd="$DOOM_EXE_PATH"
+doomArg=("-apiport" "6666" "-iwad" "$IWAD_PATH" "-server" "-screensize" "11")
+
+$listenerCmd "${listenerArg[@]}" &
+
+$doomCmd "${doomArg[@]}" &

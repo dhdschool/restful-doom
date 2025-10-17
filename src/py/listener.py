@@ -7,7 +7,7 @@ BUFFER = 2048
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((LISTEN_ADDR, PORT))
-print(f"Listening on {LISTEN_ADDR}:{PORT}")
+print(f"LLM_Listener: Listening on {LISTEN_ADDR}:{PORT}")
 
 try:
     while True:
