@@ -50,4 +50,8 @@ def llm_call(user_chat: str):
             spawn_imp(**kwargs)
         elif name == "heal_player":
             heal_player(**kwargs)
+        elif name == "give_bullets":
+            give_bullets(**kwargs)
+        elif name == "spawn_barrel":
+            spawn_barrel(**kwargs)
     
